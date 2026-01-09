@@ -1,0 +1,44 @@
+---
+layout: default
+title: Home
+---
+
+<header>
+    <h1>Ionizing Proteins Since the 90s</h1>
+    <p>Director, UC Davis Proteomics Core | Mass Spec Whisperer</p>
+    <div class="social-links">
+        <a href="https://scholar.google.com/citations?user=2p9wV0kAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://twitter.com/UCDavisProteomics"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+
+<section id="about">
+    <div class="about-grid">
+        <div><img src="https://placehold.co/400x400/022851/FFF?text=Brett+Phinney" class="profile-pic"></div>
+        <div>
+            <h2>Who Am I?</h2>
+            <p>Hi, I'm Brett. I run the <strong>UC Davis Proteomics Core</strong>. I specialize in DIA, high-throughput workflows, and explaining why your sample prep failed.</p>
+        </div>
+    </div>
+</section>
+
+<section id="pubs" style="background-color: var(--bg-light);">
+    <h2>Selected Publications</h2>
+    <div class="pub-card">
+        <div class="pub-title">Divergent and self-reactive immune responses in the CNS of COVID-19 patients</div>
+        <div class="pub-meta">Song et al. | Cell Reports Medicine (2021)</div>
+    </div>
+    </section>
+
+<section id="blog">
+    <h2>The Blog</h2>
+    <p><em>Rants, raves, and instrument error codes.</em></p>
+    
+    {% for post in site.posts %}
+    <div class="pub-card" style="border-left: none; border-top: 4px solid #022851;">
+        <h3><a href="{{ post.url | relative_url }}" style="color: #022851; text-decoration: none;">{{ post.title }}</a></h3>
+        <p style="font-size: 0.8rem; color: #888;">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p>{{ post.excerpt }}</p>
+    </div>
+    {% endfor %}
+</section>
