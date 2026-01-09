@@ -6,8 +6,10 @@
     <title>{{ page.title }} | Brett Phinney</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
     <style>
+        /* --- CSS Styles --- */
         :root {
             --bg-dark: #0f172a;       /* Deep Navy */
             --bg-card: rgba(30, 41, 59, 0.7); /* Translucent Slate */
@@ -97,8 +99,11 @@
         .btn-outline:hover { background: var(--ucd-gold); color: var(--bg-dark); }
 
         /* Footer */
-        footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 50px; text-align: center; color: var(--text-muted); margin-top: 100px; }
-        
+        footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 50px 5%; text-align: center; color: var(--text-muted); margin-top: 100px; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--ucd-blue); }
+
         /* Mobile */
         @media (max-width: 768px) {
             .feature-row { flex-direction: column; }
@@ -126,10 +131,15 @@
 
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} Brett Phinney | UC Davis Proteomics Core</p>
-        <div style="font-size: 1.5rem; margin-top: 15px;">
-            <a href="https://twitter.com/UCDavisProteomics" style="color: #94a3b8; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/" style="color: #94a3b8; margin: 0 10px;"><i class="fab fa-github"></i></a>
-            <a href="https://scholar.google.com/citations?user=2p9wV0kAAAAJ" style="color: #94a3b8; margin: 0 10px;"><i class="fas fa-graduation-cap"></i></a>
+        
+        <div class="footer-links">
+            <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://orcid.org/0000-0003-3870-3302" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/brett-phinney-4776257/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://bsky.app/profile/ucdproteomics.bsky.social" target="_blank" title="BlueSky"><i class="fas fa-cloud"></i></a>
+            <a href="https://www.youtube.com/@UCDavisProteomics" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://video.ucdavis.edu/channel/UC%2BDavis%2BProteomics/316022232" target="_blank" title="AggieVideo"><i class="fas fa-video"></i></a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=6701891999#tab=metrics" target="_blank" title="SciVal"><i class="ai ai-scopus"></i></a>
         </div>
     </footer>
 
