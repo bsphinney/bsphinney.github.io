@@ -1,4 +1,7 @@
 title: Brett Phinney
-description: Director, UC Davis Proteomics Core
-url: "https://yourusername.github.io" 
-baseurl: "" # Keep empty if it's your main user site
+description: "Director, UC Davis Proteomics Core | Darth Data"
+url: "https://bsphinney.github.io"
+baseurl: ""
+theme: null
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
