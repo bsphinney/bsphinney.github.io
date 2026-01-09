@@ -3,42 +3,90 @@ layout: default
 title: Home
 ---
 
-<header>
-    <h1>Ionizing Proteins Since the 90s</h1>
-    <p>Director, UC Davis Proteomics Core | Mass Spec Whisperer</p>
-    <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=2p9wV0kAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://twitter.com/UCDavisProteomics"><i class="fab fa-twitter"></i></a>
-    </div>
+<header class="hero">
+    <h1>Ionizing Proteins<br>Since the 90s.</h1>
+    <p>I'm Brett. I run the <strong>UC Davis Proteomics Core</strong>. We blast things with lasers and use math to figure out what they used to be.</p>
+    <a href="#research" class="btn">See The Science</a>
 </header>
 
 <section id="about">
-    <div class="about-grid">
-        <div><img src="https://placehold.co/400x400/022851/FFF?text=Brett+Phinney" class="profile-pic"></div>
-        <div>
-            <h2>Who Am I?</h2>
-            <p>Hi, I'm Brett. I run the <strong>UC Davis Proteomics Core</strong>. I specialize in DIA, high-throughput workflows, and explaining why your sample prep failed.</p>
+    <div class="grid-3">
+        <div class="card" style="grid-column: span 2;">
+            <span class="meta">The Director's Cut</span>
+            <h3>"Darth Data"</h3>
+            <p>My official title is Director. My unofficial title is <em>"The guy who tells you why your sample has keratin in it."</em></p>
+            <p>At UC Davis, we focus on <strong>Deep Biofluid Proteomics</strong> and <strong>High-Throughput automation</strong>. If you give me a sample, I will put it on a timsTOF HT and run it until the ions scream.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <img src="https://placehold.co/300x300/1e293b/FFF?text=Brett" style="border-radius: 50%; width: 150px; border: 4px solid var(--ucd-gold); margin-bottom: 20px;">
+            <p><strong>Brett S. Phinney, Ph.D.</strong><br>
+            <i class="fas fa-map-marker-alt"></i> 1414 GBSF, Davis, CA<br>
+            <a href="https://twitter.com/UCDavisProteomics" style="color: var(--ucd-blue);"><i class="fab fa-twitter"></i> @UCDavisProteomics</a></p>
+        </div>
+    </div>
+
+    <div class="stat-grid">
+        <div><div class="stat-number">100+</div><div class="stat-label">Publications</div></div>
+        <div><div class="stat-number">30k+</div><div class="stat-label">Samples Run</div></div>
+        <div><div class="stat-number">3k+</div><div class="stat-label">Proteins/hr</div></div>
+        <div><div class="stat-number">∞</div><div class="stat-label">Cups of Coffee</div></div>
+    </div>
+</section>
+
+<section id="research">
+    <h2 class="section-title">The Cool Science</h2>
+    <div class="grid-3">
+        <div class="card">
+            <span class="meta">Bioarchaeology</span>
+            <h3>Ancient Teeth & Sex Estimation</h3>
+            <p>We developed a method to determine biological sex from tooth enamel peptides (Amelogenin). It works on fossils thousands of years old. CSI: Ancient Davis.</p>
+            <a href="https://scholar.google.com/citations?user=2p9wV0kAAAAJ" target="_blank" style="color: var(--ucd-blue); font-size: 0.9rem;">Read on Scholar &rarr;</a>
+        </div>
+
+        <div class="card">
+            <span class="meta">Deep Proteomics</span>
+            <h3>Ceres Nanotrap & Biofluids</h3>
+            <p>We are identifying 3,000+ proteins in plasma using Nanotrap particles. This enriches low-abundance biomarkers like kinases that standard methods miss.</p>
+        </div>
+
+        <div class="card">
+            <span class="meta">The Classic</span>
+            <h3>The Pumpkin Phloem</h3>
+            <p>One of my most cited papers. Yes, pumpkins have a complex proteome. No, the mass spec did not smell like pumpkin spice afterwards.</p>
         </div>
     </div>
 </section>
 
-<section id="pubs" style="background-color: var(--bg-light);">
-    <h2>Selected Publications</h2>
-    <div class="pub-card">
-        <div class="pub-title">Divergent and self-reactive immune responses in the CNS of COVID-19 patients</div>
-        <div class="pub-meta">Song et al. | Cell Reports Medicine (2021)</div>
+<section id="teaching">
+    <h2 class="section-title">The Academy</h2>
+    <div class="grid-3">
+        <div class="card">
+            <span class="meta">Annual Event</span>
+            <h3>Proteomics Bootcamp</h3>
+            <p>Every summer, we host the famous <strong>UCD Proteomics Short Course</strong>. It usually fills up by July. We cover everything from "Don't touch that dial" to advanced DIA statistics.</p>
+        </div>
+        <div class="card">
+            <span class="meta">YouTube Channel</span>
+            <h3>"It's Easier Than You Think"</h3>
+            <p>I have a YouTube channel where I yell at software. Check out my tutorials on <strong>Skyline</strong>, <strong>FragPipe</strong>, and <strong>DIA-NN</strong>.</p>
+            <a href="https://www.youtube.com/@UCDavisProteomics" class="btn" style="padding: 5px 15px; font-size: 0.8rem;">Watch Videos</a>
+        </div>
+        <div class="card">
+            <span class="meta">Software</span>
+            <h3>Skyline & The Cloud</h3>
+            <p>We are huge proponents of targeted proteomics. I teach courses on using Skyline to make sure your quantitative data isn't just noise with a p-value.</p>
+        </div>
     </div>
-    </section>
+</section>
 
 <section id="blog">
-    <h2>The Blog</h2>
-    <p><em>Rants, raves, and instrument error codes.</em></p>
-    
-    {% for post in site.posts %}
-    <div class="pub-card" style="border-left: none; border-top: 4px solid #022851;">
-        <h3><a href="{{ post.url | relative_url }}" style="color: #022851; text-decoration: none;">{{ post.title }}</a></h3>
-        <p style="font-size: 0.8rem; color: #888;">{{ post.date | date: "%B %d, %Y" }}</p>
-        <p>{{ post.excerpt }}</p>
+    <h2 class="section-title">Latest Rants</h2>
+    {% for post in site.posts limit:3 %}
+    <div class="post-list-item">
+        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <h3><a href="{{ post.url | relative_url }}" style="color: white; text-decoration: none;">{{ post.title }}</a></h3>
+        <p style="color: var(--text-muted);">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url | relative_url }}" style="color: var(--ucd-gold);">Read More &rarr;</a>
     </div>
     {% endfor %}
 </section>
