@@ -1,5 +1,4 @@
 title: Brett Phinney
 description: Director, UC Davis Proteomics Core
-theme: jekyll-theme-prime # We override this with custom layouts, but this is a fallback
 url: "https://yourusername.github.io" 
 baseurl: "" # Keep empty if it's your main user site
