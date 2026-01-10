@@ -8,12 +8,12 @@ title: Home
     <h1 style="font-size: 4.5rem; line-height: 1.1; margin: 10px 0 30px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
         Ionizing Proteins<br>Since the 90s.
     </h1>
-    <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">
-        Director of the UC Davis Proteomics Core. I specialize in Deep Biofluid Proteomics, High-Throughput Automation, and explaining why your digest failed.
+    <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px;">
+        Director of the UC Davis Proteomics Core. We specialize in <strong>Deep Biofluid Proteomics</strong>, <strong>High-Throughput Automation</strong>, and turning complex biological questions into mass lists.
     </p>
     <div style="display: flex; gap: 15px; justify-content: center;">
         <a href="#science" class="btn">The Science</a>
-        <a href="https://proteomics.ucdavis.edu" class="btn btn-outline">Visit The Core</a>
+        <a href="https://proteomics.ucdavis.edu" class="btn btn-outline" target="_blank">Visit The Core</a>
     </div>
 </header>
 
@@ -23,54 +23,17 @@ title: Home
             <span class="meta">The Director's Cut</span>
             <h3>"Darth Data"</h3>
             <p>My official title is Director. My unofficial title is <em>"The guy who tells you why your sample has keratin in it."</em></p>
-            <p>At UC Davis, we focus on <strong>Deep Biofluid Proteomics</strong> (identifying 3,000+ proteins in plasma using Nanotraps) and <strong>High-Throughput automation</strong>. If you give me a sample, I will put it on a timsTOF HT and run it until the ions scream.</p>
+            <p>At the Core, we are obsessed with benchmarking. We recently validated our <strong>KingFisher SP3</strong> automated workflow against manual prep. The results?</p>
+            <ul style="color: var(--text-muted); margin-top: 10px;">
+                <li><strong>Manual Prep:</strong> ~700 phosphosites identified.</li>
+                <li><strong>Our Robots:</strong> <strong>9,220 phosphosites</strong> in a single run.</li>
+            </ul>
+            <p style="margin-top: 10px;">If you give me a sample, I will put it on a timsTOF HT and run it until the ions scream.</p>
         </div>
         <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <img src="{{ "/assets/images/brett-phinney.png" | relative_url }}" alt="Brett Phinney" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--ucd-gold); margin-bottom: 20px; object-fit: cover;">
             <div style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">Brett S. Phinney, Ph.D.</div>
             <div style="color: var(--text-muted); font-size: 0.9rem;">Director, UC Davis Proteomics Core</div>
-        </div>
-    </div>
-</section>
-
-<section id="teaching">
-    <div class="section-header">
-        <p>Education</p>
-        <h2>The Academy</h2>
-    </div>
-
-    <div class="feature-row">
-        <div class="feature-visual">
-            <img src="https://placehold.co/600x400/0f172a/38bdf8?text=Proteomics+Bootcamp" alt="Short Course">
-        </div>
-        <div class="feature-text">
-            <span class="meta">Every Summer | UC Davis</span>
-            <h3 style="font-size: 2rem;">Proteomics Short Course</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">
-                This isn't just a lecture; it's a week-long survival guide. We take ~40 participants from "What is a peptide?" to "I just analyzed a DIA dataset in Skyline."
-            </p>
-            <ul style="list-style: none; padding: 0; color: var(--text-muted); margin-bottom: 30px;">
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Wet Lab: Digestion & Desalting</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Mass Spec: Hands-on with the Orbitraps</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Data: Skyline, FragPipe, & DIA-NN</li>
-            </ul>
-            <a href="https://proteomics.ucdavis.edu/" class="btn">Apply (Fills Fast!)</a>
-        </div>
-    </div>
-
-    <div class="feature-row" style="flex-direction: row-reverse;">
-        <div class="feature-visual">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/vqeOT8xcycc" title="Limpa Tutorial" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="feature-text">
-            <span class="meta">The YouTube Channel</span>
-            <h3 style="font-size: 2rem;">"I Yell at Software"</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">
-                When I'm not in the lab, I'm recording tutorials on the <strong>UC Davis Proteomics</strong> channel. We cover the pain points: normalization, differential expression (Limpa), and QC.
-            </p>
-            <a href="https://www.youtube.com/@UCDavisProteomics" class="btn btn-outline"><i class="fab fa-youtube"></i> 30+ Videos</a>
         </div>
     </div>
 </section>
@@ -83,22 +46,65 @@ title: Home
 
     <div class="grid-3">
         <div class="card">
-            <span class="meta">Bioarchaeology</span>
-            <h3>Ancient Teeth & Sex Estimation</h3>
-            <p style="color: var(--text-muted);">We developed a method to determine biological sex from tooth enamel peptides (Amelogenin). It works on fossils thousands of years old. CSI: Ancient Davis.</p>
+            <span class="meta">eLife (2025)</span>
+            <h3>Proximity Labeling & BioID</h3>
+            <p style="color: var(--text-muted);">Collaborating with the Deretic Lab to map complex signaling networks. We used BioID/TurboID to highlight proximity labeling capabilities in autophagy pathways.</p>
             <a href="https://scholar.google.com/citations?user=2p9wV0kAAAAJ" target="_blank" style="color: var(--ucd-blue); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block;">Read on Scholar &rarr;</a>
         </div>
 
         <div class="card">
-            <span class="meta">Deep Proteomics</span>
-            <h3>Ceres Nanotrap & Biofluids</h3>
-            <p style="color: var(--text-muted);">Identifying 3,000+ proteins in plasma using Nanotrap particles. We enrich low-abundance biomarkers like kinases that standard methods miss.</p>
+            <span class="meta">Tutorial (2024)</span>
+            <h3>Bottom-Up Proteomics Guide</h3>
+            <p style="color: var(--text-muted);">A comprehensive overview of Bottom-Up Proteomics strategies. We wrote the book (well, the paper) on how to actually do this stuff correctly.</p>
         </div>
 
         <div class="card">
-            <span class="meta">The Classic</span>
+            <span class="meta">Mol. Cell. Proteomics</span>
             <h3>The Pumpkin Phloem</h3>
             <p style="color: var(--text-muted);">One of my most cited papers. Yes, pumpkins have a complex proteome. No, the mass spec did not smell like pumpkin spice afterwards.</p>
+        </div>
+    </div>
+</section>
+
+<section id="teaching">
+    <div class="section-header">
+        <p>Education</p>
+        <h2>The Academy</h2>
+    </div>
+
+    <div class="feature-row" style="flex-direction: row-reverse;">
+        <div class="feature-visual">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/vqeOT8xcycc" title="Limpa Tutorial" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="feature-text">
+            <span class="meta">YouTube: @UCDavisProteomics</span>
+            <h3 style="font-size: 2rem;">"I Yell at Software"</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                I believe that if you can't explain False Discovery Rate to a grad student, you don't understand it. Check out our tutorials on <strong>Skyline</strong>, <strong>FragPipe</strong>, and <strong>DIA-NN</strong>.
+            </p>
+            <p style="color: white;"><strong>Featured:</strong> <em>Differential Expression analysis using Limpa!!</em></p>
+            <a href="https://www.youtube.com/@UCDavisProteomics" class="btn btn-outline" target="_blank"><i class="fab fa-youtube"></i> Watch More</a>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <div class="feature-visual">
+            <img src="https://placehold.co/600x400/0f172a/38bdf8?text=Proteomics+Bootcamp" alt="Short Course">
+        </div>
+        <div class="feature-text">
+            <span class="meta">Every Summer | UC Davis</span>
+            <h3 style="font-size: 2rem;">Proteomics Short Course</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                A week-long intensive. We take you from "What is a peptide?" to "I just analyzed a DIA dataset." It usually fills up by July.
+            </p>
+            <ul style="list-style: none; padding: 0; color: var(--text-muted); margin-bottom: 30px;">
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Wet Lab: SP3 & KingFisher Prep</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Mass Spec: Orbitrap & timsTOF</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--ucd-blue); margin-right: 10px;"></i> Data: Statistical Analysis</li>
+            </ul>
+            <a href="https://proteomics.ucdavis.edu/" class="btn" target="_blank">Apply Here</a>
         </div>
     </div>
 </section>
