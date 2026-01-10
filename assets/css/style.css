@@ -141,3 +141,66 @@ section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
 @media (max-width: 768px) {
     .feature-row { flex-direction: column; }
 }
+
+/* --- GEOCITIES MODE (The 90s called) --- */
+body.geocities-mode {
+    --bg-dark: #000000;
+    --text-main: #00FF00; /* Hacker Green */
+    --text-muted: #FFFF00; /* Yellow */
+    --ucd-blue: #0000FF;   /* Standard Hyperlink Blue */
+    --ucd-gold: #FF0000;   /* Red for danger */
+    --bg-card: #000000;
+    
+    font-family: "Times New Roman", Times, serif !important;
+    background-image: url('https://media.giphy.com/media/26tOzqJwc9c89qXtu/giphy.gif'); /* Starfield */
+    background-size: 200px;
+    background-repeat: repeat;
+    cursor: crosshair;
+}
+
+body.geocities-mode h1, 
+body.geocities-mode h2, 
+body.geocities-mode h3 {
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif !important;
+    text-align: center;
+    color: yellow !important;
+    text-shadow: 2px 2px #ff0000;
+}
+
+body.geocities-mode nav {
+    background: url('https://web.archive.org/web/20090830082729/http://geocities.com/Heartland/Plains/6356/flames.gif');
+    border-bottom: 5px ridge grey;
+}
+
+body.geocities-mode .card {
+    border: 3px outset #cccccc;
+    background: #000000;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+body.geocities-mode .btn {
+    background: #c0c0c0;
+    color: black;
+    border: 2px outset white;
+    font-family: "Times New Roman";
+    border-radius: 0;
+}
+body.geocities-mode .btn:active { border-style: inset; }
+
+body.geocities-mode img {
+    border: 5px solid blue;
+    border-radius: 0 !important;
+}
+
+/* Add a "Under Construction" GIF to the bottom of the page in this mode */
+body.geocities-mode footer::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 20px auto;
+    background-image: url('https://web.archive.org/web/20090821154249/http://geocities.com/SunsetStrip/Alley/6389/construction.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
