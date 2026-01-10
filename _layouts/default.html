@@ -5,45 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Brett Phinney</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
     <style>
         body.geocities-mode {
-            /* 90s Colors */
             background-color: #000000 !important;
-            background-image: url('https://media.giphy.com/media/26tOzqJwc9c89qXtu/giphy.gif') !important; /* Starfield */
+            background-image: url('https://media.giphy.com/media/26tOzqJwc9c89qXtu/giphy.gif') !important;
             background-size: 200px !important;
-            color: #00FF00 !important; /* Hacker Green */
+            color: #00FF00 !important;
             font-family: "Comic Sans MS", "Chalkboard SE", "Times New Roman", serif !important;
         }
-
-        /* Make everything look ugly in 90s mode */
-        body.geocities-mode h1, 
-        body.geocities-mode h2, 
-        body.geocities-mode h3 {
+        body.geocities-mode h1, body.geocities-mode h2, body.geocities-mode h3 {
             color: yellow !important;
             text-shadow: 2px 2px red !important;
             font-family: "Comic Sans MS", sans-serif !important;
             text-align: center !important;
         }
-
-        body.geocities-mode .card, 
-        body.geocities-mode nav, 
-        body.geocities-mode footer {
+        body.geocities-mode .card, body.geocities-mode nav, body.geocities-mode footer {
             background: black !important;
             border: 3px ridge #aaaaaa !important;
             border-radius: 0 !important;
             backdrop-filter: none !important;
             box-shadow: none !important;
         }
-
         body.geocities-mode a { color: cyan !important; text-decoration: underline !important; }
-        body.geocities-mode p { color: #00FF00 !important; }
-        
-        /* The Button in 90s Mode */
         body.geocities-mode #timeTravelBtn {
             background: #c0c0c0 !important;
             color: black !important;
@@ -70,11 +58,19 @@
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} Brett Phinney | UC Davis Proteomics Core</p>
         
-        <div class="footer-links" style="margin-bottom: 30px;">
-            <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i></a>
-            <a href="https://www.linkedin.com/in/brett-phinney-4776257/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/UCDavisProteomics" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="footer-links" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; font-size: 1.8rem;">
+            
+            <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ" target="_blank" title="Google Scholar" style="color: #64748b; transition: color 0.3s;"><i class="ai ai-google-scholar"></i></a>
+            
+            <a href="https://orcid.org/0000-0003-3870-3302" target="_blank" title="ORCID" style="color: #a6ce39; transition: color 0.3s;"><i class="ai ai-orcid"></i></a>
+            
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=6701891999#" target="_blank" title="SciVal / Scopus" style="color: #ff6600; transition: color 0.3s;"><i class="ai ai-scopus"></i></a>
+            
+            <a href="https://www.linkedin.com/in/brett-phinney-4776257/" target="_blank" title="LinkedIn" style="color: #0077b5; transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+            
+            <a href="https://bsky.app/profile/ucdproteomics.bsky.social" target="_blank" title="Bluesky" style="color: #38bdf8; transition: color 0.3s;"><i class="fa-solid fa-cloud"></i></a>
+            
+            <a href="https://github.com/" target="_blank" title="GitHub" style="color: #64748b; transition: color 0.3s;"><i class="fab fa-github"></i></a>
         </div>
 
         <button id="timeTravelBtn" onclick="toggle90s()" style="
@@ -94,11 +90,8 @@
         function toggle90s() {
             const body = document.body;
             const btn = document.getElementById('timeTravelBtn');
-            
-            // Toggle the class
             body.classList.toggle('geocities-mode');
 
-            // Change Text
             if (body.classList.contains('geocities-mode')) {
                 btn.innerHTML = "🚫 Return to 2026";
                 alert("Welcome to Geocities! Watch out for Y2K.");
