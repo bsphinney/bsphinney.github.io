@@ -129,19 +129,37 @@
 
     {{ content }}
 
-    <footer>
+<footer>
         <p>&copy; {{ site.time | date: '%Y' }} Brett Phinney | UC Davis Proteomics Core</p>
         
         <div class="footer-links">
-            <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-            <a href="https://orcid.org/0000-0003-3870-3302" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/brett-phinney-4776257/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://bsky.app/profile/ucdproteomics.bsky.social" target="_blank" title="BlueSky"><i class="fas fa-cloud"></i></a>
-            <a href="https://www.youtube.com/@UCDavisProteomics" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://video.ucdavis.edu/channel/UC%2BDavis%2BProteomics/316022232" target="_blank" title="AggieVideo"><i class="fas fa-video"></i></a>
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=6701891999#tab=metrics" target="_blank" title="SciVal"><i class="ai ai-scopus"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://twitter.com/UCDavisProteomics" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <button id="timeTravelBtn" style="background: transparent; border: 1px solid #334155; color: #64748b; padding: 5px 15px; cursor: pointer; border-radius: 4px; font-size: 0.8rem;">
+                <i class="fas fa-history"></i> View in 1999 Mode
+            </button>
         </div>
     </footer>
 
+    <script>
+        const btn = document.getElementById('timeTravelBtn');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('geocities-mode');
+            
+            if (document.body.classList.contains('geocities-mode')) {
+                btn.innerHTML = "🚫 Return to 2026";
+                alert("Welcome to the 90s! Watch out for Y2K.");
+            } else {
+                btn.innerHTML = '<i class="fas fa-history"></i> View in 1999 Mode';
+            }
+        });
+    </script>
+
 </body>
 </html>
+
+
