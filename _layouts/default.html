@@ -11,16 +11,23 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
     <style>
-        /* 1. The Container Setup */
+        /* 1. The Background Fix (CSS Generated Stars - No Images needed) */
         body.geocities-mode {
             background-color: #000000 !important;
-            /* REPLACED BROKEN GIPHY LINK WITH RELIABLE ARCHIVE LINK */
-            background-image: url('https://web.archive.org/web/20091026191358im_/http://www.geocities.com/SunsetStrip/Towers/2949/stars.gif') !important;
-            background-size: auto !important; /* Classic tiling */
+            
+            /* This draws 3 layers of stars using pure CSS */
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 4px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px) !important;
+            
+            background-size: 550px 550px, 350px 350px, 250px 250px !important;
+            background-position: 0 0, 40px 60px, 130px 270px !important;
+            
             cursor: crosshair !important;
         }
 
-        /* 2. The Nuclear Text Fix (Targeting everything except icons) */
+        /* 2. The Nuclear Text Fix */
         body.geocities-mode :not(i):not(.fa):not(.fas):not(.fab):not(.ai) {
             font-family: "Comic Sans MS", "Chalkboard SE", "Times New Roman", serif !important;
             text-shadow: none !important;
@@ -49,7 +56,7 @@
             text-align: center !important;
         }
 
-        /* 4. Ugly Borders for Containers */
+        /* 4. Ugly Borders */
         body.geocities-mode .card, 
         body.geocities-mode nav, 
         body.geocities-mode footer,
@@ -72,7 +79,7 @@
             border: 5px solid blue !important;
         }
 
-        /* 7. The Button Specifics */
+        /* 7. Button */
         body.geocities-mode #timeTravelBtn {
             background: #c0c0c0 !important;
             color: black !important;
@@ -80,9 +87,9 @@
             font-weight: bold !important;
         }
         
-        /* 8. Fix the Footer Links Area */
+        /* 8. Footer Icons */
         body.geocities-mode .footer-links i {
-            color: yellow !important; /* Make icons visible too */
+            color: yellow !important;
         }
     </style>
 </head>
@@ -134,11 +141,11 @@
             if (body.classList.contains('geocities-mode')) {
                 btn.innerHTML = "🚫 Return to 2026";
                 
-                // Dynamically add the Construction GIF if it doesn't exist
+                // Add the construction GIF
                 if (!document.getElementById('constructionGif')) {
                     const gif = document.createElement('img');
                     gif.id = 'constructionGif';
-                    // Replaced with reliable Wikimedia link
+                    // Reliable Wikimedia link
                     gif.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Under_construction_animated.gif';
                     gif.style.display = 'block';
                     gif.style.margin = '20px auto';
