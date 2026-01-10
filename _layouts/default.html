@@ -11,33 +11,77 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
     <style>
+        /* 1. The Container Setup */
         body.geocities-mode {
             background-color: #000000 !important;
             background-image: url('https://media.giphy.com/media/26tOzqJwc9c89qXtu/giphy.gif') !important;
             background-size: 200px !important;
-            color: #00FF00 !important;
-            font-family: "Comic Sans MS", "Chalkboard SE", "Times New Roman", serif !important;
+            cursor: crosshair !important;
         }
-        body.geocities-mode h1, body.geocities-mode h2, body.geocities-mode h3 {
+
+        /* 2. The Nuclear Text Fix (Targeting everything except icons) */
+        body.geocities-mode :not(i):not(.fa):not(.fas):not(.fab):not(.ai) {
+            font-family: "Comic Sans MS", "Chalkboard SE", "Times New Roman", serif !important;
+            text-shadow: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            backdrop-filter: none !important;
+        }
+
+        /* 3. Force Visibility Colors */
+        body.geocities-mode p, 
+        body.geocities-mode li, 
+        body.geocities-mode div, 
+        body.geocities-mode span,
+        body.geocities-mode strong {
+            color: #00FF00 !important; /* Hacker Green */
+            background: transparent !important;
+        }
+
+        body.geocities-mode h1, 
+        body.geocities-mode h2, 
+        body.geocities-mode h3, 
+        body.geocities-mode .brand,
+        body.geocities-mode .meta {
             color: yellow !important;
             text-shadow: 2px 2px red !important;
-            font-family: "Comic Sans MS", sans-serif !important;
             text-align: center !important;
         }
-        body.geocities-mode .card, body.geocities-mode nav, body.geocities-mode footer {
+
+        /* 4. Ugly Borders for Containers */
+        body.geocities-mode .card, 
+        body.geocities-mode nav, 
+        body.geocities-mode footer,
+        body.geocities-mode .feature-row,
+        body.geocities-mode .btn,
+        body.geocities-mode .video-container {
             background: black !important;
-            border: 3px ridge #aaaaaa !important;
-            border-radius: 0 !important;
-            backdrop-filter: none !important;
-            box-shadow: none !important;
+            border: 3px ridge #cccccc !important;
         }
-        body.geocities-mode a { color: cyan !important; text-decoration: underline !important; }
+
+        /* 5. Links */
+        body.geocities-mode a { 
+            color: cyan !important; 
+            text-decoration: underline !important; 
+        }
+        body.geocities-mode a:visited { color: violet !important; }
+
+        /* 6. Images */
+        body.geocities-mode img {
+            border: 5px solid blue !important;
+        }
+
+        /* 7. The Button Specifics */
         body.geocities-mode #timeTravelBtn {
             background: #c0c0c0 !important;
             color: black !important;
             border: 3px outset white !important;
-            font-family: "Times New Roman" !important;
-            font-weight: bold;
+            font-weight: bold !important;
+        }
+        
+        /* 8. Fix the Footer Links Area */
+        body.geocities-mode .footer-links i {
+            color: yellow !important; /* Make icons visible too */
         }
     </style>
 </head>
@@ -59,17 +103,11 @@
         <p>&copy; {{ site.time | date: '%Y' }} Brett Phinney | UC Davis Proteomics Core</p>
         
         <div class="footer-links" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; font-size: 1.8rem;">
-            
             <a href="https://scholar.google.com/citations?hl=en&user=2p9wV0kAAAAJ" target="_blank" title="Google Scholar" style="color: #64748b; transition: color 0.3s;"><i class="ai ai-google-scholar"></i></a>
-            
             <a href="https://orcid.org/0000-0003-3870-3302" target="_blank" title="ORCID" style="color: #a6ce39; transition: color 0.3s;"><i class="ai ai-orcid"></i></a>
-            
             <a href="https://www.scopus.com/authid/detail.uri?authorId=6701891999#" target="_blank" title="SciVal / Scopus" style="color: #ff6600; transition: color 0.3s;"><i class="ai ai-scopus"></i></a>
-            
             <a href="https://www.linkedin.com/in/brett-phinney-4776257/" target="_blank" title="LinkedIn" style="color: #0077b5; transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
-            
             <a href="https://bsky.app/profile/ucdproteomics.bsky.social" target="_blank" title="Bluesky" style="color: #38bdf8; transition: color 0.3s;"><i class="fa-solid fa-cloud"></i></a>
-            
             <a href="https://github.com/" target="_blank" title="GitHub" style="color: #64748b; transition: color 0.3s;"><i class="fab fa-github"></i></a>
         </div>
 
@@ -94,9 +132,20 @@
 
             if (body.classList.contains('geocities-mode')) {
                 btn.innerHTML = "🚫 Return to 2026";
+                // Add the construction GIF dynamically
+                if (!document.getElementById('constructionGif')) {
+                    const gif = document.createElement('img');
+                    gif.id = 'constructionGif';
+                    gif.src = 'https://web.archive.org/web/20090821154249/http://geocities.com/SunsetStrip/Alley/6389/construction.gif';
+                    gif.style.display = 'block';
+                    gif.style.margin = '20px auto';
+                    document.querySelector('footer').appendChild(gif);
+                }
                 alert("Welcome to Geocities! Watch out for Y2K.");
             } else {
                 btn.innerHTML = '<i class="fas fa-history"></i> View in 1999 Mode';
+                const gif = document.getElementById('constructionGif');
+                if (gif) gif.remove();
             }
         }
     </script>
