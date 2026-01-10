@@ -14,8 +14,9 @@
         /* 1. The Container Setup */
         body.geocities-mode {
             background-color: #000000 !important;
-            background-image: url('https://media.giphy.com/media/26tOzqJwc9c89qXtu/giphy.gif') !important;
-            background-size: 200px !important;
+            /* REPLACED BROKEN GIPHY LINK WITH RELIABLE ARCHIVE LINK */
+            background-image: url('https://web.archive.org/web/20091026191358im_/http://www.geocities.com/SunsetStrip/Towers/2949/stars.gif') !important;
+            background-size: auto !important; /* Classic tiling */
             cursor: crosshair !important;
         }
 
@@ -132,15 +133,19 @@
 
             if (body.classList.contains('geocities-mode')) {
                 btn.innerHTML = "🚫 Return to 2026";
-                // Add the construction GIF dynamically
+                
+                // Dynamically add the Construction GIF if it doesn't exist
                 if (!document.getElementById('constructionGif')) {
                     const gif = document.createElement('img');
                     gif.id = 'constructionGif';
-                    gif.src = 'https://web.archive.org/web/20090821154249/http://geocities.com/SunsetStrip/Alley/6389/construction.gif';
+                    // Replaced with reliable Wikimedia link
+                    gif.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Under_construction_animated.gif';
                     gif.style.display = 'block';
                     gif.style.margin = '20px auto';
+                    gif.style.width = '150px';
                     document.querySelector('footer').appendChild(gif);
                 }
+                
                 alert("Welcome to Geocities! Watch out for Y2K.");
             } else {
                 btn.innerHTML = '<i class="fas fa-history"></i> View in 1999 Mode';
